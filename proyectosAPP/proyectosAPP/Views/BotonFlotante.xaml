@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyectosAPP.Views.BotonFlotante"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:fonts="clr-namespace:proyectosAPP.FontsIcons">
+    <Grid>
+        <!--Esto hace referencia a contenido de la pagina-->
+        <Frame BackgroundColor="Gray">
+            
+        </Frame>
+        
+        
+        <!--esto seria la parte en base al boton flotante-->
+        <pv:PancakeView HorizontalOptions="End" VerticalOptions="End" Margin="20,10" Padding="10" CornerRadius="40" Rotation="180">
+            <pv:PancakeView.BackgroundGradientStops>
+                <pv:GradientStopCollection>
+                    <pv:GradientStop Color="Transparent" Offset="0"/>
+                    <pv:GradientStop Color="Transparent" Offset="1"/>
+                </pv:GradientStopCollection>
+            </pv:PancakeView.BackgroundGradientStops>
+            <behaviors:Expander>
+                <behaviors:Expander.Header>
+                    <Label Text="&#xE801;" FontSize="30" FontAttributes="Bold" FontFamily="fontello" Padding="0,15" TextColor="Purple">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding Source={RelativeSource AncestorType={x:Type behaviors:Expander}},Path=IsExpanded}"
+                                        Value="True">
+                                <Setter Property="Text" Value="&#xE800;"/>
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                </behaviors:Expander.Header>
+                <StackLayout>
+                    <Label Text="&#xF0c5;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
+                    <Label Text="&#xF0ea;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
+                    <Label Text="&#xE802;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
+                </StackLayout>
+            </behaviors:Expander>
+        </pv:PancakeView>
+    </Grid>
+        
+</ContentPage>
