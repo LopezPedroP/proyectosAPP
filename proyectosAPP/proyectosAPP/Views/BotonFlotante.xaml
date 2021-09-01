@@ -14,10 +14,6 @@
         
         <!--esto seria la parte en base al boton flotante-->
         <pv:PancakeView HorizontalOptions="End" VerticalOptions="End" Margin="20,10" Padding="10" CornerRadius="40" Rotation="180">
-        <Grid>
-            <Label FontFamily="fontello" FontAttributes="Bold" Text="&#xE801;" FontSize="50"/>
-        </Grid>
-        <pv:PancakeView HorizontalOptions="End" VerticalOptions="End" Margin="30" Padding="15" CornerRadius="40" Rotation="180">
             <pv:PancakeView.BackgroundGradientStops>
                 <pv:GradientStopCollection>
                     <pv:GradientStop Color="Transparent" Offset="0"/>
@@ -25,9 +21,8 @@
                 </pv:GradientStopCollection>
             </pv:PancakeView.BackgroundGradientStops>
             <behaviors:Expander>
-                <behaviors:Expander.Header>
-                    <Label Text="&#xE801;" FontSize="30" FontAttributes="Bold" FontFamily="fontello" Padding="0,15">
-                    <Label Text="&#xE801;" FontSize="30" FontAttributes="Bold" FontFamily="fontello" Padding="0,15" TextColor="Purple">
+                    <behaviors:Expander.Header>
+                        <Label Text="&#xE801;" FontSize="30" FontAttributes="Bold" FontFamily="fontello" Padding="0,15" TextColor="Purple">
                         <Label.Triggers>
                             <DataTrigger TargetType="Label" Binding="{Binding Source={RelativeSource AncestorType={x:Type behaviors:Expander}},Path=IsExpanded}"
                                         Value="True">
@@ -35,20 +30,16 @@
                             </DataTrigger>
                         </Label.Triggers>
                     </Label>
+                        
                 </behaviors:Expander.Header>
-                <StackLayout>
-                    <Label Text="&#xF0c5;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="Blue" Margin="0,2"/>
-
-
-                    <Label Text="&#xF0ea;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="Blue"/>
-
-                    <Label Text="&#xE802;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="Blue"/>
-                    <Label Text="&#xF0c5;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
-                    <Label Text="&#xF0ea;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
-                    <Label Text="&#xE802;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
-                </StackLayout>
-            </behaviors:Expander>
-        </pv:PancakeView>
+                    <StackLayout>
+                        <Label Text="&#xF0c5;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
+                        <Label Text="&#xF0ea;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
+                        <Label Text="&#xE802;" FontFamily="fontello" FontAttributes="Bold" WidthRequest="30" HeightRequest="30" Rotation="180" FontSize="30" TextColor="MediumSpringGreen"/>
+                    </StackLayout>
+                   </behaviors:Expander>
+                    
+           </pv:PancakeView>
     </Grid>
         
 </ContentPage>
