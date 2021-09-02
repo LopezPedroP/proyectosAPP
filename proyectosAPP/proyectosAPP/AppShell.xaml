@@ -7,5 +7,5 @@
 
     <ShellContent Title="Boton Flotante" ContentTemplate="{DataTemplate local:BotonFlotante}"/>
     <ShellContent Title="Tabs Binding" ContentTemplate="{DataTemplate local:TabsBinding}"/>
-
+    <ShellContent Title="Tabs Binding" ContentTemplate="{DataTemplate local:NavegacionPaginas}"/>
 </Shell>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyectosAPP.Views.NavegacionPaginas">
+    <Frame>
+        <!--configurando un brush de colores en el background de un frame -->
+
+        <Frame.Background>
+            <!--con esto obtendriamos un linear gradiente de pagina-->
+
+            <LinearGradientBrush >
+                <GradientStopCollection>
+                    <GradientStop Color="Aquamarine" Offset="0"/>
+                    <GradientStop Color="CadetBlue" Offset="0.4"/>
+                    <GradientStop Color="LightGray" Offset="0.8"/>
+                    <GradientStop Color="Gray" Offset="1"/>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Frame.Background>
+<!--pagina central o contenedor-->
+        <StackLayout Orientation="Vertical">
+            
+            <!--Agregamos otro frame para dar el pequeño resultado de un recuadro-->
+            <Frame VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="50" Padding="40">
+                
+                <!--aqui es la introduccion a nuestra content page-->
+                <StackLayout>
+                    <!--Boton con color solido-->
+                    <Button Text="Navegar a la pagina uno" BackgroundColor="Purple" TextColor="GreenYellow" 
+                            CornerRadius="20" Command="{Binding PaginaUnoGo}"/>
+
+                    <!--Boton con gradiente radial-->
+                    <Button Text="Navegar a la pagina dos" TextColor="Black" CornerRadius="20" Command="{Binding PaginaDosGo}">
+                        <Button.Background>
+                            <RadialGradientBrush>
+                                <GradientStopCollection>
+                                    <GradientStop Color="YellowGreen" Offset="0"/>
+                                    <GradientStop Color="GreenYellow" Offset="0.5"/>
+                                    <GradientStop Color="Yellow" Offset="1"/>
+                                </GradientStopCollection>
+                            </RadialGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    
+                    <!--Boton con gradiente Lineal-->
+                    <Button Text="Navegar a la pagina tres" TextColor="SpringGreen" CornerRadius="20" Command="{Binding PaginaTresGo}">
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStopCollection>
+                                    <GradientStop Color="Brown" Offset="0"/>
+                                    <GradientStop Color="SandyBrown" Offset="0.5"/>
+                                    <GradientStop Color="RosyBrown" Offset="1"/>
+                                </GradientStopCollection>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    
+                    <Label Text="Estos botones estran programados con command esto hace que la navegacion sea mas ligera." FontSize="25" FontAttributes="Bold"/>
+                   
+                    <Frame CornerRadius="30">
+                        <Frame.Background>
+                            <!--con esto se obtendria un color radial en el background de la pagina-->
+                            <RadialGradientBrush>
+                                <GradientStopCollection>
+                                    <GradientStop Color="Blue" Offset="0"/>
+                                    <GradientStop Color="DodgerBlue" Offset="0.4"/>
+                                    <GradientStop Color="CadetBlue" Offset="0.8"/>
+                                    <GradientStop Color="Aquamarine" Offset="1"/>
+                                </GradientStopCollection>
+                            </RadialGradientBrush>
+                        </Frame.Background>
+                        <Label Text="Ademas de agregar degradados de fondo para obtener este pequeño resultado." FontSize="25" FontAttributes="Bold" 
+                               TextColor="Violet" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </Frame>
+</ContentPage>

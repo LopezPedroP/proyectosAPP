@@ -4,53 +4,55 @@
              x:Class="proyectosAPP.Views.TabsBinding"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
 
+    <!--Esto lo logramos gracias al soporte de xamarin community toolkit-->
+    
+    <!--se utilizara un diccionario de recursos-->
     <ContentPage.Resources>
         <ResourceDictionary>
-            
-
-                <DataTemplate x:Key="TabViewItemTemplate">
-                    <Grid>
-                        <Label
+            <!--Esto seria el content resorce para el tab-->
+            <DataTemplate x:Key="TabViewItemTemplate">
+                <Grid>
+                    <Label
                         Text="{Binding Name}"
                         HorizontalOptions="Center"
                         VerticalOptions="Center" 
                         TextColor="White"
                         Margin="12, 0"/>
-                    </Grid>
-                </DataTemplate>
-
-                <DataTemplate x:Key="TabContentTemplate">
-                    <Grid
+                </Grid>
+            </DataTemplate>
+            
+            <!--Aqui seri la content page resource-->
+            <DataTemplate x:Key="TabContentTemplate">
+                <Grid
                     Padding="10"
                     RowSpacing="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        
-                        <StackLayout
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackLayout
                         Grid.Row="1">
-                            <Label
+                        <Label
                             Text="{Binding Name}"
                             FontSize="Title"
                             HorizontalOptions="Center"/>
-                            <Label
+                        <Label
                             Text="{Binding Dato}"
                             FontSize="Subtitle"
                             HorizontalOptions="Center"/>
-                            <Label
+                        <Label
                             Text="{Binding Info}"
                             FontSize="Small"
                             HorizontalOptions="Center"
                             Margin="0, 24, 0, 12"/>
-                        </StackLayout>
-                    </Grid>
-                </DataTemplate>
-
-           
+                    </StackLayout>
+                </Grid>
+            </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    <!-- aquí viene ya nuestra pagina bindeable y usando el diccionario de recursos que creamos arriba-->
     <ContentPage.Content>
         <Grid>
 

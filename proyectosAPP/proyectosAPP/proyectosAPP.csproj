@@ -6,11 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="FontsIcons\fontello.ttf" />
+    <Compile Remove="FontsIcons\**" />
+    <EmbeddedResource Remove="FontsIcons\**" />
+    <None Remove="FontsIcons\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="FontsIcons\fontello.ttf" />
+    <None Remove="Font\fontello.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Font\fontello.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,11 +27,35 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="ModelosdePaginas\PaginaDos.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ModelosdePaginas\PaginaTres.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ModelosdePaginas\PaginaUno.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\BotonFlotante.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NavegacionPaginas.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TabsBinding.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ModelosdePaginas\PaginaDos.xaml.cs">
+      <DependentUpon>PaginaDos.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ModelosdePaginas\PaginaTres.xaml.cs">
+      <DependentUpon>PaginaTres.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ModelosdePaginas\PaginaUno.xaml.cs">
+      <DependentUpon>PaginaUno.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
